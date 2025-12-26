@@ -68,7 +68,7 @@ dados = [
 df = pd.DataFrame(dados, columns=["Modelo", "Técnica", "Hiperparâmetros"])
 
 # Exibir a tabela formatada
-print("Tabela 5x3 de Modelos e Hiperparâmetros:")
+print("Tabela de Modelos e Hiperparâmetros:")
 print(df.to_string(index=False))
 
 
