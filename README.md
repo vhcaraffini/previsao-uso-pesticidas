@@ -57,18 +57,19 @@ import pandas as pd
 
 # Dados da tabela
 dados = [
-    ['KNN', 'Random Search', 'n_neighbors, weights'],
-    ['Decision Tree', 'Random Search', 'max_depth, min_samples_split'],
-    ['Random Forest', 'Random Search', 'n_estimators, max_depth, min_samples_split'],
-    ['SVM', 'Random Search', 'C, gamma, kernel'],
-    ['MLP', 'Random Search', 'hidden_layer_sizes, alpha']
+    ["KNN", "Random Search", "n_neighbors, weights"],
+    ["Decision Tree", "Random Search", "max_depth, min_samples_split"],
+    ["Random Forest", "Random Search", "n_estimators, max_depth, min_samples_split"],
+    ["SVM", "Random Search", "C, gamma, kernel"],
+    ["MLP", "Random Search", "hidden_layer_sizes, alpha"]
 ]
 
-# Criar DataFrame
-df = pd.DataFrame(dados, columns=['Modelo', 'Técnica', 'Hiperparâmetros'])
+# Criar DataFrame com cabeçalhos
+df = pd.DataFrame(dados, columns=["Modelo", "Técnica", "Hiperparâmetros"])
 
-# Exibir o DataFrame
-print(df)
+# Exibir a tabela formatada
+print("Tabela 5x3 de Modelos e Hiperparâmetros:")
+print(df.to_string(index=False))
 
 
 # 5. Avaliação dos Modelos
