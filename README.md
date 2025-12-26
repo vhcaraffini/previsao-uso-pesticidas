@@ -8,7 +8,7 @@ Este repositório contém um projeto de Machine Learning focado na previsão da 
 O objetivo é desenvolver e comparar modelos de regressão capazes de prever o volume de uso de pesticidas. Este tipo de análise é fundamental para entender padrões agrícolas e impactos ambientais ao longo do tempo.
 
 
-# 1. Seleção e Objetivo do Dataset
+## 1. Seleção e Objetivo do Dataset
 
 ● Dataset: Uso de Pesticidas (pesticides.csv).
 ● Fonte: FAOSTAT (Food and Agriculture Organization of the United Nations) via
@@ -17,7 +17,7 @@ Kaggle.
 utilizados (coluna Value, em toneladas de ingredientes ativos) com base na Área
 (país) e no Ano.
 
-# 2. Pré-processamento dos Dados
+## 2. Pré-processamento dos Dados
 
 ● Tratamento de Colunas: As colunas Domain, Element, Item e Unit foram removidas
 por serem constantes ou redundantes para a modelagem inicial, focando nas
@@ -39,13 +39,13 @@ baseados em distância (como KNN e SVM) e Redes Neurais.
 Agora, aplicaremos os cinco modelos, incorporando a otimização de hiperparâmetros
 usando RandomizedSearchCV (mais eficiente para exploração inicial) e o pré-processador dentro de um Pipeline.
 
-# 3. Desenvolvimento dos Modelos
+## 3. Desenvolvimento dos Modelos
 
 Para o problema de regressão, foram implementados os cinco modelos solicitados, cada um
 encapsulado em um Pipeline para garantir a aplicação correta do pré-processamento
 (One-Hot Encoding e Scaling) antes do treinamento do estimador.
 
-# 4. Otimização dos Hiperparâmetros
+## 4. Otimização dos Hiperparâmetros
 
 A técnica utilizada foi o Randomized Search Cross-Validation (RandomizedSearchCV), que
 é mais eficiente que o Grid Search na busca por bons hiperparâmetros em espaços de
@@ -53,18 +53,23 @@ busca grandes. A otimização foi realizada usando 3-Fold Cross-Validation e a m
 scoring Negative Mean Squared Error (neg_mean_squared_error).
 
 
-# Modelo Técnica de Busca Hiperparâmetros Otimizados
+### Modelo Técnica de Busca Hiperparâmetros Otimizados
 
 | Modelo | Técnica | Hiperparâmetros |
+
 | Decision Tree | Random Search | max_depth, min_samples_split |
+
 | Random Forest | Random Search | n_estimators, max_depth, min_samples_split |
+
 | SVM | Random Search | C, gamma, kernel |
+
 | KNN | Random Search | n_neighbors, weights |
+
 | MLP | Random Search | hidden_layer_sizes, alpha |
 
 
 
-# 5. Avaliação dos Modelos
+## 5. Avaliação dos Modelos
 
 ● Métricas Escolhidas e Justificativa: Para problemas de regressão, as métricas
 escolhidas foram:
@@ -81,7 +86,7 @@ desempenho, com o maior R2 e o menor RMSE, indicando que eles capturaram a
 relação entre o país, o ano e o uso de pesticidas de forma mais eficaz.
 
 
-# 6. Comparação e Análise Crítica
+## 6. Comparação e Análise Crítica
 
 ● Comparação de Modelos:
 ○ Random Forest / Decision Tree: Os modelos baseados em árvore geralmente
