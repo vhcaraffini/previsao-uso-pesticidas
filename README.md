@@ -51,25 +51,17 @@ A técnica utilizada foi o Randomized Search Cross-Validation (RandomizedSearchC
 é mais eficiente que o Grid Search na busca por bons hiperparâmetros em espaços de
 busca grandes. A otimização foi realizada usando 3-Fold Cross-Validation e a métrica de
 scoring Negative Mean Squared Error (neg_mean_squared_error).
-Modelo Técnica de Busca Hiperparâmetros Otimizados
 
-import pandas as pd
 
-# Dados da tabela
-dados = [
-    ["KNN", "Random Search", "n_neighbors, weights"],
-    ["Decision Tree", "Random Search", "max_depth, min_samples_split"],
-    ["Random Forest", "Random Search", "n_estimators, max_depth, min_samples_split"],
-    ["SVM", "Random Search", "C, gamma, kernel"],
-    ["MLP", "Random Search", "hidden_layer_sizes, alpha"]
-]
+# Modelo Técnica de Busca Hiperparâmetros Otimizados
 
-# Criar DataFrame com cabeçalhos
-df = pd.DataFrame(dados, columns=["Modelo", "Técnica", "Hiperparâmetros"])
+| Modelo | Técnica | Hiperparâmetros |
+| Decision Tree | Random Search | max_depth, min_samples_split |
+| Random Forest | Random Search | n_estimators, max_depth, min_samples_split |
+| SVM | Random Search | C, gamma, kernel |
+| KNN | Random Search | n_neighbors, weights |
+| MLP | Random Search | hidden_layer_sizes, alpha |
 
-# Exibir a tabela formatada
-print("Tabela de Modelos e Hiperparâmetros:")
-print(df.to_string(index=False))
 
 
 # 5. Avaliação dos Modelos
