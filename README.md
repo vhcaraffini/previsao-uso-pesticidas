@@ -53,11 +53,22 @@ busca grandes. A otimização foi realizada usando 3-Fold Cross-Validation e a m
 scoring Negative Mean Squared Error (neg_mean_squared_error).
 Modelo Técnica de Busca Hiperparâmetros Otimizados
 
-| KNN | Random Search | n_neighbors, weights |
-| Decision | Tree Random Search | max_depth, min_samples_split |
-| Random | Forest Random Search | n_estimators, max_depth, min_samples_split |
-| SVM | Random Search | C, gamma, kernel |
-| MLP | Random Search | hidden_layer_sizes, alpha |
+import pandas as pd
+
+# Dados da tabela
+dados = [
+    ['KNN', 'Random Search', 'n_neighbors, weights'],
+    ['Decision Tree', 'Random Search', 'max_depth, min_samples_split'],
+    ['Random Forest', 'Random Search', 'n_estimators, max_depth, min_samples_split'],
+    ['SVM', 'Random Search', 'C, gamma, kernel'],
+    ['MLP', 'Random Search', 'hidden_layer_sizes, alpha']
+]
+
+# Criar DataFrame
+df = pd.DataFrame(dados, columns=['Modelo', 'Técnica', 'Hiperparâmetros'])
+
+# Exibir o DataFrame
+print(df)
 
 
 # 5. Avaliação dos Modelos
